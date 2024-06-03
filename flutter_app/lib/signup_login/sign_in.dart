@@ -5,6 +5,7 @@ import 'package:flutter_app/api/my_api.dart';
 import 'package:flutter_app/components/text_widget.dart';
 import 'package:flutter_app/pages/article_page.dart';
 import 'package:flutter_app/signup_login/sign_up.dart';
+import 'package:flutter_app/welcome/welcome_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignIn extends StatefulWidget {
@@ -78,7 +79,13 @@ class _SignInState extends State<SignIn> {
                       padding: EdgeInsets.only(right: 20),
                       constraints: const BoxConstraints(),
                       icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF363f93)),
-                      onPressed: () => Navigator.of(context, rootNavigator: true).pop(context),
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true).pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => WelcomePage()),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -130,10 +137,7 @@ class _SignInState extends State<SignIn> {
                     },
                     child: TextWidget(text: "Sign up", fontSize: 16, isUnderLine: true),
                   ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: TextWidget(text: "Forgot Password", fontSize: 16, isUnderLine: true),
-                  ),
+
                 ],
               ),
             ],

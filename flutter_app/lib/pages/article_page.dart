@@ -282,7 +282,7 @@ class _ArticlePageState extends State<ArticlePage> {
                               borderRadius: BorderRadius.circular(10.0),
                               image: DecorationImage(
                                 fit:BoxFit.fill,
-                                image: NetworkImage("http://192.168.18.14:8000/uploads/"+articles[i].img.toString())
+                                image: NetworkImage("http://192.168.18.13:8000/uploads/"+articles[i].img.toString())
                               )
                             ),
                           ),
@@ -407,7 +407,7 @@ class _ArticlePageState extends State<ArticlePage> {
                               borderRadius: BorderRadius.circular(10.0),
                               image: DecorationImage(
                                 fit:BoxFit.fill,
-                                image: NetworkImage("http://192.168.18.14:8000/uploads/"+allarticles[i].img.toString())
+                                image: NetworkImage("http://192.168.18.13:8000/uploads/"+allarticles[i].img.toString())
                               )
                             ),
                           ),

@@ -69,7 +69,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               )
                             ],
                             image: DecorationImage(
-                              image: NetworkImage("http://192.168.18.14:8000/uploads/${widget.articleInfo.img}"),
+                              image: NetworkImage("http://192.168.18.13:8000/uploads/${widget.articleInfo.img}"),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -93,39 +93,39 @@ class _DetailBookPageState extends State<DetailBookPage> {
                   ),
                 ),
                 SizedBox(height: 40),
-                Container(
-                  padding: const EdgeInsets.only(right: 20, left: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(Icons.favorite, color: Color(0xFF7b8ea3), size: 22),
-                          SizedBox(width: 10),
-                          TextWidget(text: "Like", fontSize: 16),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(Icons.share, color: Color(0xFF7b8ea3), size: 22),
-                          SizedBox(width: 10),
-                          TextWidget(text: "Share", fontSize: 16),
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(Icons.bookmarks_sharp, color: Color(0xFF7b8ea3), size: 22),
-                          SizedBox(width: 10),
-                          TextWidget(text: "Bookself", fontSize: 16),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(height: 30),
+                // Container(
+                //   padding: const EdgeInsets.only(right: 20, left: 15),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //     children: [
+                //       Row(
+                //         mainAxisSize: MainAxisSize.min,
+                //         children: <Widget>[
+                //           Icon(Icons.favorite, color: Color(0xFF7b8ea3), size: 22),
+                //           SizedBox(width: 10),
+                //           TextWidget(text: "Like", fontSize: 16),
+                //         ],
+                //       ),
+                //       Row(
+                //         mainAxisSize: MainAxisSize.min,
+                //         children: <Widget>[
+                //           Icon(Icons.share, color: Color(0xFF7b8ea3), size: 22),
+                //           SizedBox(width: 10),
+                //           TextWidget(text: "Share", fontSize: 16),
+                //         ],
+                //       ),
+                //       Row(
+                //         mainAxisSize: MainAxisSize.min,
+                //         children: <Widget>[
+                //           Icon(Icons.bookmarks_sharp, color: Color(0xFF7b8ea3), size: 22),
+                //           SizedBox(width: 10),
+                //           TextWidget(text: "Bookself", fontSize: 16),
+                //         ],
+                //       )
+                //     ],
+                //   ),
+                // ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     Padding(
@@ -142,23 +142,22 @@ class _DetailBookPageState extends State<DetailBookPage> {
                   child: TextWidget(text: widget.articleInfo.article_content, fontSize: 16, color: Colors.grey),
                 ),
                 GestureDetector(
-  onTap: () {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => AllBooks()));
-  },
-  child: Container(
-    padding: const EdgeInsets.only(right: 20, left: 15),
-    margin: const EdgeInsets.only(top: 70),
-    color: Colors.transparent, // Ensure the container is tappable
-    child: Row(
-      children: [
-        TextWidget(text: "Check the directory", fontSize: 20),
-        Expanded(child: Container()),
-        Icon(Icons.arrow_forward_ios),
-      ],
-    ),
-  ),
-),
-
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AllBooks()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.only(right: 20, left: 15),
+                  margin: const EdgeInsets.only(top: 70),
+                  color: Colors.transparent, // Ensure the container is tappable
+                  child: Row(
+                    children: [
+                      TextWidget(text: "Check the directory", fontSize: 20),
+                      Expanded(child: Container()),
+                      Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
+                ),
+              ),
               ],
             ),
           ),
